@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Personal Journey</title>
+</head>
+<body style="margin: 0; display: flex; height: 100vh; overflow-x: hidden; overflow-y: auto;">
+    <div id="container" style="display: flex; width: 600vw; transition: transform 0.5s ease;">
+        <div id="home" style="width: 100vw; background-color: black; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; border-right: 3px solid white; padding: 20px; min-height: 100vh;">
+            <h1>Welcome to My Journey</h1>
+            <img src="C:\Users\User\Downloads\Essence of Dreams.jpg" alt="Childhood photo" width="300">
+            <p>Welcome to my portfolio, where I take you through the various stages of my life.</p>
+            <p>As you navigate through the webpages you will find stories of my experiences, the skills I've developed, and my future goals.</p>
+        </div>
+        <div id="childhood" style="width: 100vw; background-color: purple; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; border-right: 3px solid white; padding: 20px; min-height: 100vh;">
+            <h1>My Childhood</h1>
+            <img src="C:\Users\User\Downloads\africa_04 by David Sacks© (2).jpg" alt="childhood image" width="300">
+            <p>I was born in a hospital in Nairobi. At the time we lived in Dandora but relocated to Kitui when I turned 2. My early years were filled with playful adventures and learning about the world around me.</p>
+            <p>Growing up in a nurturing environment helped me develop a strong sense of curiosity and creativity. I enjoyed playing outdoors and learning from the experiences of elders in my neighborhood.</p>
+        </div>
+        <div id="education" style="width: 100vw; background-color: blue; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; border-right: 3px solid white; padding: 20px; min-height: 100vh;">
+            <h1>Education</h1>
+            <img src="C:\Users\User\Downloads\Category_Classrooms - Wikimedia Commons (2).jpg" alt="Class in session" width="300">
+            <p>My education journey started in primary school where I first developed a love for learning. I attended St. Francis of Assisi primary school where the teachers described me as curious, which pushed me to explore more.</p>
+            <p>I attended St. Charles Lwanga. I participated in numerous academic competitions and workshops which led me to discover my passion for technology. Now as a university student, I am pursuing a degree in Software Engineering at Zetech University.</p>
+        </div>
+        <div id="skills" style="width: 100vw; background-color: yellow; color: black; display: flex; flex-direction: column; align-items: center; justify-content: center; border-right: 3px solid black; padding: 20px; min-height: 100vh;">
+            <h1>Skills & Talents</h1>
+            <img src="C:\Users\User\Downloads\Computer Aid Supports Training for Computer Coders in Kenya (1).jpg" alt="skills" width="300">
+            <p> I have developed several technical and creative skills including programming and problem-solving. These skills have helped me grow both academically and personally.</p>
+            <p>One of my biggest strengths is adaptability. I enjoy learning new technologies and staying up to date with the latest advancements in my field.</p>
+        </div>
+        <div id="aspirations" style="width: 100vw; background-color: green; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; border-right: 3px solid white; padding: 20px; min-height: 100vh;">
+            <h1>Future Aspirations</h1>
+            <img src="C:\Users\User\Downloads\Coding (1).jpg" alt="Future aspirations" width="300" height="300">
+            <p>My dream is to become a software developer, specializing in artificial intelligence and cybersecurity. I want to build innovative solutions that drive technological advancements.</p>
+            <p>Beyond my career, I aspire to mentor young people who are passionate about technology. I believe that sharing knowledge and inspiring others is just as important as personal growth.</p>
+        </div>
+        <div id="contact" style="width: 100vw; background-color: grey; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; min-height: 100vh;">
+            <h1>Contact</h1>
+            <p>If you would like to reach out feel free to contact me. I am always open to discussions about technology and learning opportunities.</p>
+            <p>Email: gabrielmueti@gmail.com</p>
+            <p>LinkedIn: Gabrielmueti@linkedin</p>
+            <p>GitHub: github.com/gabrielmueti</p>
+        </div>
+    </div>
+    
+    <div style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px;">
+        <button onclick="navigate(-1)">Previous</button>
+        <button onclick="navigate(1)">Next</button>
+    </div>
+    
+    <script>
+        let index = 0;
+        function navigate(step) {
+            index = Math.max(0, Math.min(5, index + step));
+            document.getElementById('container').style.transform = `translateX(${-index * 100}vw)`;
+        }
+    </script>
+</body>
+</html>
